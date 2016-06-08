@@ -5,7 +5,7 @@ import os
 import forms
 from glob import glob
 from os.path import basename
-import IPython.nbformat.current as nbf
+import nbformat.current as nbf
 from run_ipynb import convert_nb_html, inject_params
 from flask import Flask, request, render_template, abort, g
 

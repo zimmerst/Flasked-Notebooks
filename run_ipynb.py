@@ -10,13 +10,13 @@ Adapted from: https://gist.github.com/minrk/2620735
 
 from Queue import Empty
 from BeautifulSoup import BeautifulSoup
-from IPython.config import Config
-from IPython.nbconvert import HTMLExporter
-from IPython.nbformat.current import NotebookNode
-try:
-    from IPython.kernel import KernelManager
-except ImportError:
-    from IPython.zmq.blockingkernelmanager import BlockingKernelManager as KernelManager
+from traitlets.config import Config
+from nbconvert import HTMLExporter
+from nbformat.current import NotebookNode
+#from IPython.kernel import KernelManager
+from jupyter_client import KernelManager
+#except ImportError:
+#    from IPython.Kernel.zmq.blockingkernelmanager import BlockingKernelManager as KernelManager
 
 
 def run_cell(shell, iopub, cell, timeout=60):
